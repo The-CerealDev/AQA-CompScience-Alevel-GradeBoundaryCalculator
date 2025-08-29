@@ -13,11 +13,11 @@ def courseworkToTest(b):
     for index in b:
         calc = math.ceil((index[1] - weightedMark)/1.5)
         if calc <= 0:
-            print("You are automatically guarenteed at least a grade " + index[0])
+            print(f"You are automatically guarenteed at least a grade {index[0]}")
         elif calc > 200:
-            print("You cannot achieve a grade of " + index[0] + ", you would need a mark of " + str(calc) + " out of 200")
+            print(f"You cannot achieve a grade of {index[0]}, you would need a mark of {calc} out of 200")
         else:
-            print("In order to achieve a grade", index[0], "you need to achieve a score of", str(calc),"out of 200 in the exam ("+str((calc/200)*100)+"%)")
+            print(f"In order to achieve a grade {index[0]} you need to achieve a score of {calc} out of 200 in the exam ({(calc/200)*100}%)")
 def testToCoursework(b):
     testMark = -2
     while testMark == -2:
@@ -32,11 +32,11 @@ def testToCoursework(b):
     for index in b:
         calc = math.ceil((index[1] - weightedMark))
         if calc <= 0:
-            print("You are automatically guarenteed at least a grade " + index[0])
+            print(f"You are automatically guarenteed at least a grade {index[0]}")
         elif calc > 75:
-            print("You cannot achieve a grade of " + index[0] + ", you would need a mark of " + str(calc) + " out of 75")
+            print(f"You cannot achieve a grade of {index[0]}, you would need a mark of {calc} out of 75")
         else:
-            print("In order to achieve a grade", index[0], "you need to achieve a score of", str(calc),"out of 75 in the coursework ("+str(round((calc/75)*100,2))+"%)")
+            print(f"In order to achieve a grade {index[0]} you need to achieve a score of {calc} out of 75 in the coursework ({round((calc/75)*100,2)}%)")
 def menu(b):
     choice = input("1. Know coursework mark, find test mark\n2. Know test mark, find coursework mark\n3. Quit\n")
     while choice not in ["1","2","3"]:
